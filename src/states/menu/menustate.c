@@ -69,11 +69,11 @@ void drawMenuValues(void)
     VDP_drawText(difficultyStr,GETRIGHTX(difficultyStr,5),menuOptionStartY+2);
     if(settings.difficulty == DL_Custom)
     {
-        sprintf(buf,"%d",settings.width);
+        sprintf(buf,"%u",settings.width);
         VDP_drawText(buf,GETRIGHTX(buf,5),menuOptionStartY+4);
-        sprintf(buf,"%d",settings.height);
+        sprintf(buf,"%u",settings.height);
         VDP_drawText(buf,GETRIGHTX(buf,5),menuOptionStartY+6);
-        sprintf(buf,"%d",settings.mineCount);
+        sprintf(buf,"%u",settings.mineCount);
         VDP_drawText(buf,GETRIGHTX(buf,5),menuOptionStartY+8);
     }
     VDP_setTextPalette(PAL0);
@@ -88,7 +88,7 @@ void drawLeaderboard(void)
     {
         if(strlen(lowestTimes.topBeginner[i].name) > 0)
         {
-            sprintf(buf,"%6s %4d",lowestTimes.topBeginner[i].name,lowestTimes.topBeginner[i].score);
+            sprintf(buf,"%6s %4u",lowestTimes.topBeginner[i].name,lowestTimes.topBeginner[i].score);
             VDP_drawText(buf,3,menuLeaderTextStartY+i);
         }
         else
@@ -100,7 +100,7 @@ void drawLeaderboard(void)
     {
         if(strlen(lowestTimes.topIntermediate[i].name) > 0)
         {
-            sprintf(buf,"%6s %4d",lowestTimes.topIntermediate[i].name,lowestTimes.topIntermediate[i].score);
+            sprintf(buf,"%6s %4u",lowestTimes.topIntermediate[i].name,lowestTimes.topIntermediate[i].score);
             VDP_drawText(buf,15,menuLeaderTextStartY+i);
         }
         else
@@ -112,7 +112,7 @@ void drawLeaderboard(void)
     {
         if(strlen(lowestTimes.topExpert[i].name) > 0)
         {
-            sprintf(buf,"%6s %4d",lowestTimes.topExpert[i].name,lowestTimes.topExpert[i].score);
+            sprintf(buf,"%6s %4u",lowestTimes.topExpert[i].name,lowestTimes.topExpert[i].score);
             VDP_drawText(buf,27,menuLeaderTextStartY+i);
         }
         else

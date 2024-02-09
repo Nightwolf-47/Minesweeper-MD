@@ -12,7 +12,7 @@
 
 #define GETCENTERX(str) (20-(strlen(str)>>1)) //Get the X position to make string centered
 
-#define GETRIGHTX(str,offs) (40-strlen(str)-offs) //Get the X position to make string right-aligned with offset
+#define GETRIGHTX(str,offs) (40-strlen(str)-(offs)) //Get the X position to make string right-aligned with offset
 
 #define SCORE_NAME_LEN 7
 

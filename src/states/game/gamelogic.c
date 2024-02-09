@@ -299,9 +299,12 @@ u16 uncoverTile(u16 x, u16 y)
 void startUncoveringTiles(u16 x, u16 y)
 {
     tryAddingToUncoverStack(x,y);
-    while(mineGameData.uncoverStackPos > 0)
+    if(mineGameData.uncoverStackPos > 0) //Play sound if tiles are uncovered
     {
         XGM_startPlayPCM(SFX_UNCOVER,1,SOUND_PCM_CH2);
+    }
+    while(mineGameData.uncoverStackPos > 0)
+    {
         u16 pos = popFromTileUncoverStack();
         x = pos >> 8;
         y = pos & 0xFF;

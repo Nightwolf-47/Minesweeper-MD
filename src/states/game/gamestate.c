@@ -36,7 +36,7 @@ void drawHUD(void)
 void updateHUDTime(void)
 {
     char buf[5];
-    sprintf(buf,"%04d",min((u16)fix32ToInt(mineGameData.gameTime),9999));
+    sprintf(buf,"%04u",min((u16)fix32ToInt(mineGameData.gameTime),9999));
     VDP_drawText(buf,32,2);
 }
 
