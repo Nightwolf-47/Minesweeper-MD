@@ -1,0 +1,5 @@
+out/
+src/boot/
+.vscode/
+res/resources.h
+*.txt
