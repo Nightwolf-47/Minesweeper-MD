@@ -43,3 +43,6 @@ Mega Drive port of Minesweeper with features such as:
 
 ## SGDK information
 The game is compiled with SGDK 2.00, but SGDK 1.90 should also work as it was the version used for most of the game's development.  
+
+## License
+This game is licensed under the [MIT License](https://github.com/Nightwolf-47/Minesweeper-MD/blob/main/LICENSE).
