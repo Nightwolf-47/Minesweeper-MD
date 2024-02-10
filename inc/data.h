@@ -14,7 +14,7 @@
 
 #define GETRIGHTX(str,offs) (40-strlen(str)-(offs)) //Get the X position to make string right-aligned with offset
 
-#define SCORE_NAME_LEN 7
+#define SCORE_NAME_LEN 7 //Length of player name string on the leaderboard including the null character
 
 
 #define SFX_CLICK 64
@@ -27,7 +27,7 @@ enum States { //List of game states
     ST_SCORESTATE
 };
 
-struct VidReservedImage //Structure containing a pointer to an image and VRAM position it should be drawn at (with VDP_drawImageEx TILE_ATTR_FULL)
+struct VidReservedImage //Structure containing a pointer to an image and VRAM position it should be drawn at
 {
     u16 vPos;
     const Image* img;
@@ -86,9 +86,7 @@ VidImagePtr reserveVImage(const Image* img, bool preload);
 extern struct GameState states[STATE_COUNT];
 extern u8 currentState; //Current game state
 
-extern bool randomNoPattern; //If TRUE, random() is called every frame to prevent the RNG from returning the same values every time
-
-extern const char* versionStr; //Version string, shows up in About menu
+extern const char* versionStr; //Version string, shows up in the main menu
 
 extern u16 newPalette[64]; //New palette, has to be set in init() function of a given state
 

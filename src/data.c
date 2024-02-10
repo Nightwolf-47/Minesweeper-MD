@@ -8,8 +8,6 @@
 struct GameState states[STATE_COUNT];
 u8 currentState = ST_GAMESTATE;
 
-bool randomNoPattern = TRUE;
-
 const char* versionStr = "RC 2";
 
 u16 newPalette[64] = {0};

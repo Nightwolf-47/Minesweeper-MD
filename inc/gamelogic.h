@@ -4,7 +4,7 @@
 #include <data.h>
 
 #define TILEMASK 0xF //Get tile type from tile data by doing data value & TILEMASK
-#define TILEFLAGMASK 0xF0 //Get tile flags from tile data by doing data value & TILEMASK
+#define TILEFLAGMASK 0xF0 //Get tile flags from tile data by doing data value & TILEFLAGMASK
 
 #define TILE_UNCOVER_STACKSIZE 1024 //Max stack size for uncovered tiles (actual size is double that as the stack is u16)
 
@@ -37,7 +37,7 @@ enum TileType
     TT_COVERED = 16, //Tile is covered (bitwise flag)
     TT_FLAGGED = 32, //Tile is flagged (bitwise flag)
 
-    TT_INVALID = 128 //Tile is invalid
+    TT_INVALID = 206 //Tile is invalid if it's > 8 (bitwise flag)
 };
 
 struct MineGrid
