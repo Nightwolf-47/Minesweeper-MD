@@ -21,9 +21,9 @@ static char newScoreName[SCORE_NAME_LEN] = {'\0'};
 static VidImagePtr scoreBgImg;
 static Sprite* keySelector = NULL;
 
-static char scoreMenuKeys[] = "1234567890QWERTYUIOPASDFGHJKL ZXCVBNM~\x7F ";
+static const char scoreMenuKeys[] = "1234567890QWERTYUIOPASDFGHJKL ZXCVBNM~\x7F ";
 
-static char emptyNameString[] = "      ";
+static const char emptyNameString[] = "      ";
 
 //Draw the top message (about the current leaderboard place and time)
 static void drawNewScoreTime(void)
