@@ -137,7 +137,7 @@ void drawMenu(bool drawImage)
         else if(i==5 && settings.difficulty != DL_Custom)
             VDP_drawText(optionStrings[i],5,menuOptionStartY+4);
     }
-    VDP_drawText(versionStr,GETRIGHTX(versionStr,3),menuOptionStartY+(6*2));
+    VDP_drawText(versionStr,3,menuOptionStartY+(6*2));
     drawMenuValues();
     drawMenuCursor();
     drawLeaderboard();
