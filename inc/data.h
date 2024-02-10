@@ -2,7 +2,7 @@
 #define DATA_H_INCLUDED
 #include <genesis.h>
 
-#define MIN_WIDTH_HEIGHT 5 //Minimal width and height
+#define MIN_WIDTH_HEIGHT 5 //Minimal grid width and height
 
 #define STATE_COUNT 3 //Amount of game states
 
