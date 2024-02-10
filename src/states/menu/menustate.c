@@ -40,6 +40,7 @@ const char* optionStrings[6] = {
 };
 
 VidImagePtr menuBackgroundImg;
+Image* texMenuBGUnpacked;
 
 //Adjusts the mine count setting so that it's lower than the grid size
 void adjustMenuMineCount(void)
@@ -261,7 +262,8 @@ void changeMenuValue(u16 button)
 void menustate_init(void)
 {
     adjustMenuMineCount();
-    menuBackgroundImg = reserveVImage(&texMenuBG,FALSE);
+    texMenuBGUnpacked = unpackImage(&texMenuBG,NULL);
+    menuBackgroundImg = reserveVImage(texMenuBGUnpacked,FALSE);
     memcpy(&newPalette[16],texMenuBG.palette->data,texMenuBG.palette->length*sizeof(u16));
     newPalette[15] = RGB24_TO_VDPCOLOR(0x000000);
     newPalette[47] = RGB24_TO_VDPCOLOR(0x000088);
@@ -366,5 +368,9 @@ void menustate_joyevent(u16 joy, u16 changed, u16 state)
 
 void menustate_stop(void)
 {
-    ;
+    if(texMenuBGUnpacked)
+    {
+        MEM_free(texMenuBGUnpacked);
+        texMenuBGUnpacked = NULL;
+    }
 }

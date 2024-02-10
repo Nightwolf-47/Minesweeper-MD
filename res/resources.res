@@ -13,7 +13,7 @@ IMAGE texTileMine "graphics/tile_mine.png" 0
 IMAGE texBorderH "graphics/borderH.png" 0
 IMAGE texBorderV "graphics/borderV.png" 0
 IMAGE texGameHUD "graphics/game_hud.png" 0
-IMAGE texMenuBG "graphics/menu_bg.png" 0
+IMAGE texMenuBG "graphics/menu_bg.png" LZ4W
 IMAGE texScoreInputBG "graphics/score_bg.png" 0
 SPRITE sprCursor "graphics/cursor.png" 1 1 0
 SPRITE sprKeySel "graphics/score_keyselector.png" 3 3 0
