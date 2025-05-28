@@ -1,9 +1,9 @@
 # Minesweeper MD
 
-![game](https://github.com/Nightwolf-47/Minesweeper-MD/assets/72660447/e3f6b7b9-c768-4f8a-8315-a5012a723cee)
-![score_input](https://github.com/Nightwolf-47/Minesweeper-MD/assets/72660447/5da76400-d647-4a10-aa47-4b57b5362680)  
-![menu](https://github.com/Nightwolf-47/Minesweeper-MD/assets/72660447/749c4c59-5a54-4769-9921-df9347378e3a)
-![game_lost](https://github.com/Nightwolf-47/Minesweeper-MD/assets/72660447/94838e92-c80a-4c90-b389-1438d2487fe1)
+<img src="https://github.com/user-attachments/assets/50afe42f-47e0-4d71-90fb-d1ffbff3f1dc" width="450"></img>
+<img src="https://github.com/user-attachments/assets/ee291277-d75c-4223-902a-124850147cbb" width="450"></img>
+<img src="https://github.com/user-attachments/assets/1026aea8-dc3d-485f-9e83-a69cb6f01969" width="450"></img>
+<img src="https://github.com/user-attachments/assets/1c133abd-8b94-4e31-ae54-79f78a493d0d" width="450"></img>
 
 
 Mega Drive port of Minesweeper with features such as: 
