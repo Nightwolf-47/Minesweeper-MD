@@ -16,6 +16,7 @@ VidImagePtr coveredTileTex;
 VidImagePtr flaggedTileTex;
 VidImagePtr borderHTex;
 VidImagePtr borderVTex;
+VidImagePtr borderCTex;
 
 s16 gameCursorX = 0;
 s16 gameCursorY = 0;
@@ -499,13 +500,14 @@ void logic_drawText(const char* text)
 
 void logic_drawBorders(void)
 {
+    VDP_setTileMapXY(BG_A,TILE_ATTR_FULL(PAL1,0,FALSE,FALSE,borderCTex->vPos),gridXOffset-1,gridYOffset-1);
     for(s16 x=0; x<mineGameData.grid.width; x++)
     {
-        VDP_setTileMapXY(BG_B,TILE_ATTR_FULL(PAL1,0,FALSE,FALSE,borderVTex->vPos),gridXOffset+x,gridYOffset-1);
+        VDP_setTileMapXY(BG_A,TILE_ATTR_FULL(PAL1,0,FALSE,FALSE,borderVTex->vPos),gridXOffset+x,gridYOffset-1);
     }
     for(s16 y=0; y<mineGameData.grid.height; y++)
     {
-        VDP_setTileMapXY(BG_B,TILE_ATTR_FULL(PAL1,0,FALSE,FALSE,borderHTex->vPos),gridXOffset-1,gridYOffset+y);
+        VDP_setTileMapXY(BG_A,TILE_ATTR_FULL(PAL1,0,FALSE,FALSE,borderHTex->vPos),gridXOffset-1,gridYOffset+y);
     }
 }
 
@@ -518,17 +520,17 @@ void logic_drawTile(u8 tile, u16 x, u16 y)
     {
         if(tile & TT_FLAGGED)
         {
-            VDP_setTileMapXY(BG_B,TILE_ATTR_FULL(palette,0,FALSE,FALSE,flaggedTileTex->vPos),x,y);
+            VDP_setTileMapXY(BG_A,TILE_ATTR_FULL(palette,0,FALSE,FALSE,flaggedTileTex->vPos),x,y);
         }
         else
         {
-            VDP_setTileMapXY(BG_B,TILE_ATTR_FULL(palette,0,FALSE,FALSE,coveredTileTex->vPos),x,y);
+            VDP_setTileMapXY(BG_A,TILE_ATTR_FULL(palette,0,FALSE,FALSE,coveredTileTex->vPos),x,y);
         }
     }
     else
     {
         tile &= TILEMASK;
-        VDP_setTileMapXY(BG_B,TILE_ATTR_FULL(palette,0,FALSE,FALSE,tileTextures[tile]->vPos),x,y);
+        VDP_setTileMapXY(BG_A,TILE_ATTR_FULL(palette,0,FALSE,FALSE,tileTextures[tile]->vPos),x,y);
     }
 }
 
@@ -657,6 +659,7 @@ void logic_startGame(void)
     flaggedTileTex = reserveVImage(&texTileFlagged,TRUE);
     borderHTex = reserveVImage(&texBorderH,TRUE);
     borderVTex = reserveVImage(&texBorderV,TRUE);
+    borderCTex = reserveVImage(&texBorderC,TRUE);
     memcpy(&newPalette[16],texTileFlagged.palette->data,sizeof(u16)*texTileFlagged.palette->length);
     memcpy(&newPalette[32],texTileFlagged.palette->data,sizeof(u16)*texTileFlagged.palette->length);
     newPalette[15] = RGB24_TO_VDPCOLOR(0xEE0000);
@@ -673,7 +676,7 @@ void logic_startGame(void)
 
 u16 logic_calculateScorePlace(u16* timePtr)
 {
-    *timePtr = (u16)fix32ToInt(mineGameData.gameTime);
+    *timePtr = (u16)F32_toInt(mineGameData.gameTime);
     struct TopScore* leaderBoard;
     switch(settings.difficulty)
     {

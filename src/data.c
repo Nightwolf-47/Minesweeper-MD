@@ -8,7 +8,7 @@
 struct GameState states[STATE_COUNT];
 u8 currentState = ST_GAMESTATE;
 
-const char* versionStr = "v1.0";
+const char* versionStr = "v1.1";
 
 u16 newPalette[64] = {0};
 

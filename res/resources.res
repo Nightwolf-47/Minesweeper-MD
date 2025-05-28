@@ -12,6 +12,7 @@ IMAGE texTileFlagged "graphics/tile_flagged.png" 0
 IMAGE texTileMine "graphics/tile_mine.png" 0
 IMAGE texBorderH "graphics/borderH.png" 0
 IMAGE texBorderV "graphics/borderV.png" 0
+IMAGE texBorderC "graphics/borderC.png" 0
 IMAGE texGameHUD "graphics/game_hud.png" 0
 IMAGE texMenuBG "graphics/menu_bg.png" LZ4W
 IMAGE texScoreInputBG "graphics/score_bg.png" 0

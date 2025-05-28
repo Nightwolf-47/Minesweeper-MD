@@ -48,7 +48,9 @@ Mega Drive port of Minesweeper with features such as:
 **TildeArrow** - [Furnace](https://github.com/tildearrow/furnace), a chiptune tracker used to make the victory and game over jingles.  
 
 ## SGDK information
-The game is compiled with SGDK 2.00, but SGDK 1.90 should also work as it was the version used for most of the game's development.  
+Version 1.1 is compiled with SGDK 2.11, but SGDK 2.10 should work as well.  
+  
+Version 1.0 was compiled with SGDK 2.00.
 
 ## License
 This game is licensed under the [MIT License](https://github.com/Nightwolf-47/Minesweeper-MD/blob/main/LICENSE).  
