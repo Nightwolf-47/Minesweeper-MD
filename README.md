@@ -1,9 +1,9 @@
 # Minesweeper MD
 
-<img src="https://github.com/user-attachments/assets/50afe42f-47e0-4d71-90fb-d1ffbff3f1dc" width="450"></img>
-<img src="https://github.com/user-attachments/assets/ee291277-d75c-4223-902a-124850147cbb" width="450"></img>
-<img src="https://github.com/user-attachments/assets/1026aea8-dc3d-485f-9e83-a69cb6f01969" width="450"></img>
-<img src="https://github.com/user-attachments/assets/1c133abd-8b94-4e31-ae54-79f78a493d0d" width="450"></img>
+<img src="https://github.com/user-attachments/assets/50afe42f-47e0-4d71-90fb-d1ffbff3f1dc" width="400"></img>
+<img src="https://github.com/user-attachments/assets/ee291277-d75c-4223-902a-124850147cbb" width="400"></img>
+<img src="https://github.com/user-attachments/assets/1026aea8-dc3d-485f-9e83-a69cb6f01969" width="400"></img>
+<img src="https://github.com/user-attachments/assets/1c133abd-8b94-4e31-ae54-79f78a493d0d" width="400"></img>
 
 
 Mega Drive port of Minesweeper with features such as: 
