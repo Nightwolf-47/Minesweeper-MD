@@ -13,10 +13,10 @@ void joyEventHandler(u16 joy, u16 changed, u16 state)
 
 int main(bool hard)
 {
+    SPR_init();
     mouse_stop();
     if(JOY_getPortType(PORT_1) == PORT_TYPE_MOUSE)
         mouse_init();  
-    SPR_init();
     JOY_setEventHandler(&joyEventHandler);
     setupStates();
     data_initsfx();

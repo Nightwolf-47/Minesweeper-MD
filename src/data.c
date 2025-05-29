@@ -8,7 +8,7 @@
 struct GameState states[STATE_COUNT];
 u8 currentState = ST_GAMESTATE;
 
-const char* versionStr = "v1.1";
+const char* versionStr = "v1.1.1";
 
 u16 newPalette[64] = {0};
 
@@ -107,8 +107,6 @@ void initState(enum States newState)
     XGM_stopPlay();
     if(states[currentState].init)
         states[currentState].init();
-    if(mouse_isEnabled())
-        mouse_changeState(newState);
     PAL_fadeIn(0,63,newPalette,15,FALSE);
     isChangingState = FALSE;
 }
@@ -136,8 +134,6 @@ void changeState(enum States newState)
     XGM_stopPlay();
     if(states[currentState].init)
         states[currentState].init();
-    if(mouse_isEnabled())
-        mouse_changeState(newState);
     PAL_fadeIn(0,63,newPalette,15,FALSE);
     isChangingState = FALSE;
 }

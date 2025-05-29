@@ -33,14 +33,6 @@ void mouse_update(void)
     SPR_setPosition(mouseSprite,mouseConvCoord(mousePosX),mouseConvCoord(mousePosY));
 }
 
-void mouse_changeState(enum States newState)
-{
-    if(mouseSprite)
-        SPR_releaseSprite(mouseSprite);
-    mouseSprite = SPR_addSpriteSafe(&sprCursor,mouseConvCoord(mousePosX),mouseConvCoord(mousePosY),TILE_ATTR(PAL1,1,FALSE,FALSE));
-    SPR_setDepth(mouseSprite,SPR_MIN_DEPTH);
-}
-
 MousePosition mouse_getPosition(bool inTiles)
 {
     MousePosition mpos;
